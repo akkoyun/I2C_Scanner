@@ -1,8 +1,8 @@
 {
-	"name": "<Library_Name>",
+	"name": "I2C_Scanner",
 	"version": "1.0.0",
-	"keywords": "<Library_Keywords>",
-	"description": "<Library_Description>",
+	"keywords": "I2C, Device, Scanner, Console, VT100, Multiplexer, Sensor",
+	"description": "The Two-Wire interface is extremely useful for connecting multiple devices, as they can all share the same two pins (plus a ground return). This is because the devices are \"addressable\". Each device needs to have a unique address in the range 0x03 to 0x77. This tool scans the master I2C bus and reports connected devices.",
 	"authors":
 	{
 		"name": "Mehmet Gunce Akkoyun",
@@ -11,7 +11,7 @@
 	},
 	"license": "MIT",
 	"frameworks": "arduino",
-	"headers": "<Library_Header_Name>.h",
+	"headers": "I2C_Scanner.h",
 	"platforms":
 	[
 		"atmelavr",
@@ -20,17 +20,13 @@
 	"repository":
 	{
 		"type": "git",
-		"url": "https://github.com/akkoyun/<Repo_Name>.git"
+		"url": "https://github.com/akkoyun/I2C_Scanner.git"
 	},
 	"examples": [
 		{
-			"name": "<Sample_Name>",
-			"base": "examples/<Sample_Folder>",
-			"files": [
-				"<Sample_Name>.ino"
-			]
+			"name": "I2C Device Scanner",
+			"base": "examples/Device_Scanner",
+			"files": ["Device_Scanner.ino"]
 		}
 	]
 }
-
-
