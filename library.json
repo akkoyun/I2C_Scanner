@@ -22,6 +22,17 @@
 		"type": "git",
 		"url": "https://github.com/akkoyun/I2C_Scanner.git"
 	},
+	"dependencies":
+	[
+		{
+			"owner": "akkoyun",
+			"name": "Console"
+		},
+		{
+			"owner": "akkoyun",
+			"name": "I2C_Functions"
+		}
+	],
 	"examples": [
 		{
 			"name": "I2C Device Scanner",
