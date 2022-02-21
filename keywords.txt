@@ -1,5 +1,5 @@
 #######################################
-# Syntax Coloring Map For <Library_Name>
+# Syntax Coloring Map For I2C_Scanner
 #######################################
 
 #######################################
