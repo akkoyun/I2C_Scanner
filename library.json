@@ -1,0 +1,36 @@
+{
+	"name": "<Library_Name>",
+	"version": "1.0.0",
+	"keywords": "<Library_Keywords>",
+	"description": "<Library_Description>",
+	"authors":
+	{
+		"name": "Mehmet Gunce Akkoyun",
+		"email": "akkoyun@me.com",
+		"url": "https://github.com/akkoyun"
+	},
+	"license": "MIT",
+	"frameworks": "arduino",
+	"headers": "<Library_Header_Name>.h",
+	"platforms":
+	[
+		"atmelavr",
+		"atmelmegaavr"
+	],
+	"repository":
+	{
+		"type": "git",
+		"url": "https://github.com/akkoyun/<Repo_Name>.git"
+	},
+	"examples": [
+		{
+			"name": "<Sample_Name>",
+			"base": "examples/<Sample_Folder>",
+			"files": [
+				"<Sample_Name>.ino"
+			]
+		}
+	]
+}
+
+
