@@ -56,6 +56,9 @@ bool _I2C_Scanner::Device_Scan(void) {
 	// Declare Address Variable
 	uint8_t _Address = 0x00;
 
+	// Set Sensor Name Row
+	uint8_t _Row = 24;
+
 	for (uint8_t j = 6; j < 21; j = j + 2) {
 
 		// Control Device Line 1
@@ -69,6 +72,16 @@ bool _I2C_Scanner::Device_Scan(void) {
 
 					Terminal.Text(j,i,CYAN,String("0x"));
 					Terminal.Text(j,i+2,CYAN,String(_Address,HEX));
+
+					// Print Sensor Name
+					if (_Address == 0x70) {Terminal.Text(_Row,2,CYAN,String("[0x70] TCA9548 I2C Multiplexer")); _Row++;}
+					if (_Address == 0x52) {Terminal.Text(_Row,2,CYAN,String("[0x52] RV-3028-C7 RTC")); _Row++;}
+					if (_Address == 0x50) {Terminal.Text(_Row,2,CYAN,String("[0x50] DS28C Serial ID IC")); _Row++;}
+					if (_Address == 0x40) {Terminal.Text(_Row,2,CYAN,String("[0x40] HDC2010 T/H Sensor")); _Row++;}
+					if (_Address == 0x36) {Terminal.Text(_Row,2,CYAN,String("[0x36] MAX17055 Battery Gauge IC")); _Row++;}
+					if (_Address == 0x6B) {Terminal.Text(_Row,2,CYAN,String("[0x6B] BQ24298 Battery Charger IC")); _Row++;}
+					if (_Address == 0x40) {Terminal.Text(_Row,2,CYAN,String("[0x40] SHT21 T/H Sensor")); _Row++;}
+					
 
 				} else {
 
@@ -87,6 +100,17 @@ bool _I2C_Scanner::Device_Scan(void) {
 
 	// Print Mux Channel
 	Terminal.Text(22,115,CYAN,String(I2C._Multiplexer_Current_Channel));
+
+}
+bool _I2C_Scanner::Clear_Sensor_List(void) {
+
+	Terminal.Text(24,2,CYAN,String("                                "));
+	Terminal.Text(25,2,CYAN,String("                                "));
+	Terminal.Text(26,2,CYAN,String("                                "));
+	Terminal.Text(27,2,CYAN,String("                                "));
+	Terminal.Text(28,2,CYAN,String("                                "));
+	Terminal.Text(29,2,CYAN,String("                                "));
+	Terminal.Text(30,2,CYAN,String("                                "));
 
 }
 

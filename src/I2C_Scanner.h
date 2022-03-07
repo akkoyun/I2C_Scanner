@@ -4,24 +4,36 @@
  *
  *	Library				: I2C Device Scannner
  *	Code Developer		: Mehmet Gunce Akkoyun (akkoyun@me.com)
- *
  *********************************************************************************/
 
 #ifndef __I2C_Scanner__
 #define __I2C_Scanner__
 
-// Define Library Structures
-#include <I2C_Scanner_Defination.h>
+// Define Arduino Library
+#ifndef __Arduino__
+#include <Arduino.h>
+#endif
+
+// Define I2C Functions Library
+#ifndef __I2C_Functions__
+#include <I2C_Functions.h>
+#endif
+
+// Define Console Library
+#ifndef __Console__
+#include <Console.h>
+#endif
 
 class _I2C_Scanner {
 
 	public:
 
-		bool Draw_Table(void);
 		bool Device_Scan(void);
+		bool Draw_Table(void);
+		bool Clear_Sensor_List(void);
 
 	private:
-	
+
 };
 
 extern _I2C_Scanner I2C_Scanner;
