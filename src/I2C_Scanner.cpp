@@ -74,14 +74,34 @@ bool _I2C_Scanner::Device_Scan(void) {
 					Terminal.Text(j,i+2,CYAN,String(_Address,HEX));
 
 					// Print Sensor Name
-					if (_Address == 0x70) {Terminal.Text(_Row,2,CYAN,String("[0x70] TCA9548 I2C Multiplexer")); _Row++;}
-					if (_Address == 0x52) {Terminal.Text(_Row,2,CYAN,String("[0x52] RV-3028-C7 RTC")); _Row++;}
-					if (_Address == 0x50) {Terminal.Text(_Row,2,CYAN,String("[0x50] DS28C Serial ID IC")); _Row++;}
-					if (_Address == 0x40) {Terminal.Text(_Row,2,CYAN,String("[0x40] HDC2010 T/H Sensor")); _Row++;}
-					if (_Address == 0x36) {Terminal.Text(_Row,2,CYAN,String("[0x36] MAX17055 Battery Gauge IC")); _Row++;}
-					if (_Address == 0x6B) {Terminal.Text(_Row,2,CYAN,String("[0x6B] BQ24298 Battery Charger IC")); _Row++;}
-					if (_Address == 0x40) {Terminal.Text(_Row,2,CYAN,String("[0x40] SHT21 T/H Sensor")); _Row++;}
-					
+					if (_Address == I2C.TCA9548.I2C_Address) {
+						Terminal.Text(_Row, 2, CYAN, "0x" + String(I2C.TCA9548.I2C_Address, HEX) + " - " + String(I2C.TCA9548.Sensor_Name) + " - " + String(I2C.TCA9548.Sensor_Vendor) + " (" + String(I2C.TCA9548.Sensor_Type) + ")");
+						_Row++;
+					}
+					if (_Address == I2C.RV3028C7.I2C_Address) {
+						Terminal.Text(_Row, 2, CYAN, "0x" + String(I2C.RV3028C7.I2C_Address, HEX) + " - " + String(I2C.RV3028C7.Sensor_Name) + " - " + String(I2C.RV3028C7.Sensor_Vendor) + " (" + String(I2C.RV3028C7.Sensor_Type) + ")"); 
+						_Row++;
+					}
+					if (_Address == I2C.DS28C.I2C_Address) {
+						Terminal.Text(_Row, 2, CYAN, "0x" + String(I2C.DS28C.I2C_Address, HEX) + " - " + String(I2C.DS28C.Sensor_Name) + " - " + String(I2C.DS28C.Sensor_Vendor) + " (" + String(I2C.DS28C.Sensor_Type) + ")"); 
+						_Row++;
+					}
+					if (_Address == I2C.HDC2010.I2C_Address) {
+						Terminal.Text(_Row, 2, CYAN, "0x" + String(I2C.HDC2010.I2C_Address, HEX) + " - " + String(I2C.HDC2010.Sensor_Name) + " - " + String(I2C.HDC2010.Sensor_Vendor) + " (" + String(I2C.HDC2010.Sensor_Type) + ")"); 
+						_Row++;
+					}
+					if (_Address == I2C.MAX17055.I2C_Address) {
+						Terminal.Text(_Row, 2, CYAN, "0x" + String(I2C.MAX17055.I2C_Address, HEX) + " - " + String(I2C.MAX17055.Sensor_Name) + " - " + String(I2C.MAX17055.Sensor_Vendor) + " (" + String(I2C.MAX17055.Sensor_Type) + ")"); 
+						_Row++;
+					}
+					if (_Address == I2C.BQ24298.I2C_Address) {
+						Terminal.Text(_Row, 2, CYAN, "0x" + String(I2C.BQ24298.I2C_Address, HEX) + " - " + String(I2C.BQ24298.Sensor_Name) + " - " + String(I2C.BQ24298.Sensor_Vendor) + " (" + String(I2C.BQ24298.Sensor_Type) + ")"); 
+						_Row++;
+					}
+					if (_Address == I2C.SHT21.I2C_Address) {
+						Terminal.Text(_Row, 2, CYAN, "0x" + String(I2C.SHT21.I2C_Address, HEX) + " - " + String(I2C.SHT21.Sensor_Name) + " - " + String(I2C.SHT21.Sensor_Vendor) + " (" + String(I2C.SHT21.Sensor_Type) + ")"); 
+						_Row++;
+					}					
 
 				} else {
 

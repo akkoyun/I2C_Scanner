@@ -35,9 +35,9 @@
 	],
 	"examples": [
 		{
-			"name": "I2C Device Scanner",
-			"base": "examples/Device_Scanner",
-			"files": ["Device_Scanner.ino"]
+			"name": "I2C Device Scanner With Multiplexer",
+			"base": "examples/Device_Scanner_With_Mux",
+			"files": ["Device_Scanner_With_Mux.ino"]
 		}
 	]
 }
