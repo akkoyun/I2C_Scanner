@@ -1,6 +1,6 @@
 {
 	"name": "I2C_Scanner",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"keywords": "I2C, Device, Scanner, Console, VT100, Multiplexer, Sensor",
 	"description": "The Two-Wire interface is extremely useful for connecting multiple devices, as they can all share the same two pins (plus a ground return). This is because the devices are \"addressable\". Each device needs to have a unique address in the range 0x03 to 0x77. This tool scans the master I2C bus and reports connected devices.",
 	"authors":
@@ -35,9 +35,9 @@
 	],
 	"examples": [
 		{
-			"name": "I2C Device Scanner",
-			"base": "examples/Device_Scanner",
-			"files": ["Device_Scanner.ino"]
+			"name": "I2C Device Scanner With Multiplexer",
+			"base": "examples/Device_Scanner_With_Mux",
+			"files": ["Device_Scanner_With_Mux.ino"]
 		}
 	]
 }
