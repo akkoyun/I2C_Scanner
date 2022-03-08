@@ -9,7 +9,7 @@ void setup() {
 	Terminal.Begin(Serial);
 
 	// Draw Table
-	I2C_Scanner.Draw_Table();
+	Terminal.I2C_Scanner_Table();
 
 	// Start I2C
 	Wire.begin();
