@@ -28,10 +28,7 @@ class _I2C_Scanner {
 
 	public:
 
-		// Sensor Defination
-
 		bool Device_Scan(void);
-		bool Draw_Table(void);
 		bool Clear_Sensor_List(void);
 
 	private:
