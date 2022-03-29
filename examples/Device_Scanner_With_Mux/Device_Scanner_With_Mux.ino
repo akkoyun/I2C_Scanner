@@ -33,39 +33,39 @@ void loop() {
 		// Handle Command
 		switch (Key) {
 		case '0':
-			I2C.Set_Multiplexer(I2C.TCA9548.I2C_Address, 0);
+			I2C.Set_Multiplexer(__I2C__TCA9548__Addr__, 0);
 			I2C_Scanner.Clear_Sensor_List();
 			break;		
 		case '1':
-			I2C.Set_Multiplexer(I2C.TCA9548.I2C_Address, 1);
+			I2C.Set_Multiplexer(__I2C__TCA9548__Addr__, 1);
 			I2C_Scanner.Clear_Sensor_List();
 			break;		
 		case '2':
-			I2C.Set_Multiplexer(I2C.TCA9548.I2C_Address, 2);
+			I2C.Set_Multiplexer(__I2C__TCA9548__Addr__, 2);
 			I2C_Scanner.Clear_Sensor_List();
 			break;		
 		case '3':
-			I2C.Set_Multiplexer(I2C.TCA9548.I2C_Address, 3);
+			I2C.Set_Multiplexer(__I2C__TCA9548__Addr__, 3);
 			I2C_Scanner.Clear_Sensor_List();
 			break;		
 		case '4':
-			I2C.Set_Multiplexer(I2C.TCA9548.I2C_Address, 4);
+			I2C.Set_Multiplexer(__I2C__TCA9548__Addr__, 4);
 			I2C_Scanner.Clear_Sensor_List();
 			break;		
 		case '5':
-			I2C.Set_Multiplexer(I2C.TCA9548.I2C_Address, 5);
+			I2C.Set_Multiplexer(__I2C__TCA9548__Addr__, 5);
 			I2C_Scanner.Clear_Sensor_List();
 			break;		
 		case '6':
-			I2C.Set_Multiplexer(I2C.TCA9548.I2C_Address, 6);
+			I2C.Set_Multiplexer(__I2C__TCA9548__Addr__, 6);
 			I2C_Scanner.Clear_Sensor_List();
 			break;		
 		case '7':
-			I2C.Set_Multiplexer(I2C.TCA9548.I2C_Address, 7);
+			I2C.Set_Multiplexer(__I2C__TCA9548__Addr__, 7);
 			I2C_Scanner.Clear_Sensor_List();
 			break;		
 		case '8':
-			I2C.Set_Multiplexer(I2C.TCA9548.I2C_Address, 8);
+			I2C.Set_Multiplexer(__I2C__TCA9548__Addr__, 8);
 			I2C_Scanner.Clear_Sensor_List();
 			break;		
 		default:
